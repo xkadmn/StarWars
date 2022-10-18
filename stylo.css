@@ -117,8 +117,8 @@ footer:hover{
 #footer{
     display: flex;
     justify-content: space-between;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 5%;
+    padding-right: 10%;
    
 }
 
@@ -141,6 +141,7 @@ footer:hover{
 }
 .logofooter{
     padding-right: 5%;
+    margin-top: 0.8%;
     width: 100px;
     height: 70px;
 
