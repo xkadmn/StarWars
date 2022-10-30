@@ -112,7 +112,7 @@ main{
 .seccion1 img{
 	float:right;
 	width: 30%;
-	padding-top: 100px;
+	padding-top: 5%;
 }
 
 
@@ -125,7 +125,7 @@ main p {
 	text-align: center;
 	margin-top: 5%;
 	font-family: 'Roboto', sans-serif;
-	font-size: 25px;
+	font-size: 20px;
 }
 
 h1{
@@ -133,6 +133,10 @@ h1{
 }
 h3 {
 	text-align: center;
+}
+h4{
+	text-align: center;
+	margin-top: 5%;
 }
 
 footer{
@@ -180,22 +184,31 @@ footer:hover{
 
 
 .alumno{
-    width: 100%;
+	width: 100%;
     list-style:none;
 
 }
 .logofooter{
-    padding-right: 5%;
+	padding-right: 5%;
     margin-top: 0.8%;
     width: 100px;
     height: 70px;
 
 }
 
-iframe{
-width: 100%;
-list-style:none;
+.iconfooter{
+	padding-right: 5%;
+	padding: 25%;
+    margin-top: 48%;
+    width: 2vw;
+    height: 2vw;
+	
+}
 
+iframe{
+width: 80%;
+list-style:none;
+padding: 3% 10%;
 }
 
 @media screen and (max-width:1200px ) {
