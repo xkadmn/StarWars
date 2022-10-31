@@ -27,9 +27,6 @@
     padding: 10px 0;
 }
 
-.formulario__grupo-input {
-    position: relative;
-}
 
 .formulario__input {
     width: 90%;
@@ -121,6 +118,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 15px;
 }
 
 .formulario__btn {

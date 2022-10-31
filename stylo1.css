@@ -22,14 +22,14 @@ body{
 
 header {
 	width:100%;
-  	background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,.8);
 	position: fixed;
 	display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1500px;
-    margin: auto;
-
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1800px;
+  margin: auto;
+  z-index:10;
 }
 header:hover{
     background-color:rgba(0.0.0.1);
@@ -91,8 +91,9 @@ header nav ul li a:hover {
 }
 
 main{
-	padding-top: 220px ;
+	padding-top: 20% ;
 	padding-bottom: 10%;
+	text-align: center;
 }
 
 .seccion1 {
@@ -118,7 +119,8 @@ main{
 
 .seccion2 {
 	width: 90%;
-	margin-top: 5%;
+	margin: 5%;
+
 }
 
 main p {

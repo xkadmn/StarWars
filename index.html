@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="stylo1.css" rel="stylesheet">
-    <link href="form.css" rel="stylesheet">
-    <link href="img/" rel="icon">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="death-star.png" type="image/x-icon" rel="icon">
     <title>Star Wars</title>
 
     
@@ -101,63 +101,71 @@
     <section id="formulario_contacto" class="borde__formulario" data-scroll-spy>
       <h2>Envíanos tus comentarios</h2>
       <!-- FORMULARIO -->
-      <form action="https://formsubmit.co/your@email.com" class="formulario" id="formulario"  method="POST" target="_blank">
+      <form action="#" class="formulario" id="form"  method="POST" target="_blank">
 
           <!-- GRUPO DE NOMBRE-->
-          <div class="formulario__grupo" id="grupo__nombre">
+          <div class="formulario__grupo" id="grupo__name">
               <label class="formulario__label">Nombre y Apellido</label>
               <div class="formulario__grupo-input">
 
-                  <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="">
+                  <input type="text" class="formulario__input" name="name" id="name" placeholder="" required="">
                   <i class="formulario__validacion-estado fas fa-times-circle"></i>
               </div>
               <p class="formulario__input-error">El nombre debe tener minimo 4 caracteres y solo se admiten números, letras y guión bajo.</p>
           </div>
 
+
           <!-- GRUPO DE EMAIL -->
-          <div class="formulario__grupo" id="grupo__correo">
+          <div class="formulario__grupo" id="grupo__email">
               <label class="formulario__label">Correo Electronico</label>
               <div class="formulario__grupo-input">
-                  <input type="email" class="formulario__input" name="correo" id="correo" placeholder="">
+                  <input type="email" class="formulario__input" name="email" id="email" placeholder="">
                   <i class="formulario__validacion-estado fas fa-times-circle"></i>
               </div>
-              <p class="formulario__input-error">El correo debe tener mÍnimo 4 caracteres y sólo se admiten números, letras y guión bajo.</p>
+              <p class="formulario__input-error">Debe ingresar un E-mail correcto.</p>
           </div>
 
+          <!-- GRUPO DE ASUNTO-->
+          <div class="formulario__grupo" id="grupo__subject">
+              <label class="formulario__label">Asunto</label>
+              <div class="formulario__grupo-input">
+
+                  <input type="text" class="formulario__input" name="subject" id="subject" placeholder="">
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              </div>
+              <p class="formulario__input-error">El subject debe tener minimo 1 caracteres y solo se admiten números, letras y guión bajo.</p>
+          </div>
+
+
           <!-- GRUPO COMENTARIO-->
-          <div class="formulario__grupo" id="grupo__comentario">
+          <div class="formulario__grupo" id="grupo__comments">
               <label class="formulario__label">Escribe tus comentarios</label>
               <div class="formulario__grupo-input">
 
-                  <textarea class="formulario__input" name="comentario" id="comentario" placeholder=""></textarea>
+                  <textarea class="formulario__input" name="comments" id="comments" placeholder="" required="" cols="15" rows="5" maxlength="255"></textarea>
                   <i class="formulario__validacion-estado fas fa-times-circle"></i>
               </div>
               <p class="formulario__input-error">Tu comentario no debe exceder los 255 caracteres.</p>
           </div>
 
 
-          <!-- GRUPO TERMINOS Y CONDICIONES -->
-          <div class="formulario__grupo formulario__grupo-terminos" id="grupo__terminos">
-              <label class="formulario__label">
-                  <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
-                  <b class="formulario__span">Acepto los terminos y condiciones</b>
-              </label>
-          </div>
-
-          <!-- MENSAJE DE CAMPOS REQUERIDOS -->
-          <div class="formulario__mensaje" id="formulario__mensaje">
-              <p><i class="fas fa-exclamation-circle"> <b>Error:</b> Debes completar todos los campos</i></p>
-          </div>
-
 
           <!-- GRUPO ENVIAR -->
           <div class="formulario__grupo formulario__grupo-btn-enviar">
               <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">El formulario se envió correctamente</p>
-              <input class="formulario__btn" type="submit" value="Enviar">
+              <input class="formulario__btn" type="submit" value="Enviar" id="button">
           </div>
       </form>
 
+      <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+      <script type="text/javascript">
+          emailjs.init('9v9C3f__3YdSdqj0d')
+      </script>
+
   </section>
+
 
     </main>
     
@@ -169,9 +177,9 @@
           <li class="alumno"><p>Profesor: Arturo Grottoli</p></li>
         </ul>
        
-        <a href="#"><img class="iconfooter" src="img/instagram_amarillo-removebg-preview.png" href="#"></a>
-        <a href="#"><img class="iconfooter" src="img/gorjeo_amarillo-removebg-preview.png" href="#"></a>
-        <a href="#"><img class="iconfooter" src="img/facebook_amarillo-removebg-preview.png" href="#"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img class="iconfooter" src="img/instagram_amarillo-removebg-preview.png" href="#"></a>
+        <a href="https://twitter.com/?lang=es" target="_blank"><img class="iconfooter" src="img/gorjeo_amarillo-removebg-preview.png" href="#"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img class="iconfooter" src="img/facebook_amarillo-removebg-preview.png" href="#"></a>
         <a href="index.html"><img class="logofooter" src="img/starwars.png" href="index.html"></a>
         
       </div>
@@ -179,6 +187,30 @@
  
   <script src="http://code.jquery.com/jquery-latest.js"> </script>
   <script src="menu.js"> </script>
+  <script src="js/validaciones_formulario.js"></script>
+  <script>
+              const btn = document.getElementById('button');
+
+              document.getElementById('form')
+                      .addEventListener('submit', function (event) {
+                          event.preventDefault();
+
+                          btn.value = 'Enviando...';
+
+                          const serviceID = 'default_service';
+                          const templateID = 'template_xzj5ic7';
+
+                          emailjs.sendForm(serviceID, templateID, this)
+                                  .then(() => {
+                                      btn.value = 'Enviar';
+                                      alert('Mensaje Enviado!');
+                                  }, (err) => {
+                                      btn.value = 'Enviar';
+                                      alert(JSON.stringify(err));
+                                  });
+                      });
+
+  </script>
 
 </body>
 </html>
